@@ -1,7 +1,6 @@
 import * as crypto from 'crypto'
 import * as pull from 'pull-stream'
-import { Throughput } from '../src'
-import prettyBytes = require('pretty-bytes')
+import { Throughput, prettyBytes } from '../src'
 
 const t = new Throughput({ interval: 2e3 })
 

@@ -1,5 +1,8 @@
 import * as pull from 'pull-stream'
 import { EventEmitter } from 'events'
+import prettyBytes = require('pretty-bytes')
+
+export { prettyBytes }
 
 export interface ThroughputOptions {
   interval: number
