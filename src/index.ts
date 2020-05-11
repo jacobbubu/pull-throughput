@@ -56,7 +56,7 @@ export class Throughput<T> extends EventEmitter {
               this._statAt = now
               const deltaBytes = this._totalBytes - this._statBytes
               this._statBytes = this._totalBytes
-              this._latestBPS = (deltaBytes / timeDiff) * 1000
+              this._latestBPS = Math.floor((deltaBytes / timeDiff) * 1000)
               if (this._latestBPS > this._maxBPS) {
                 this._maxBPS = this._latestBPS
               }
